@@ -5,7 +5,7 @@ import { MdEdit } from 'react-icons/md';
 import { Task } from '../../../../models/task.model';
 import { MyModal } from '../../../atoms/Modal';
 import { TaskForm } from '../../../forms/Tasks';
-import { Container } from './styled';
+import { Container, Styledheader } from './styled';
 
 interface Props {
   index: number;
@@ -33,9 +33,9 @@ export const Card: React.FC<Props> = ({ index, task }) => {
         //   provided.draggableProps.style
         // )}
         >
-          <header>
+          <Styledheader>
             {task.title}
-          </header>
+          </Styledheader>
           <p>{task.status}</p>
           <MyModal
             icon={<MdEdit size={16} />}

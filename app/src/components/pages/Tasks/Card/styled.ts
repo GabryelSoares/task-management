@@ -8,22 +8,16 @@ export const Container = styled.div<Props>`
   position: relative;
   background: #FFF;
   border-radius: 5px;
-  margin-bottom: 10px;
-  padding: 15px;
   box-shadow: 0 1px 4px 0 rgba(192, 208, 230, 0.8);
-  border-top: 20px solid rgba(230, 236, 245, 0.4);
   cursor: grab;
-
-  header {
-    position: absolute;
-    top: -32px;
-    left: 16px;
-  }
+  max-width: 320px;
+  margin-bottom: 8px;
+  
   .MyModal{      
-    width: 20px; 
-    height: 20px;
+    width: 24px; 
+    height: 24px;
     position: absolute;
-    top: -20px;
+    top: -24px;
     right: 0;
     color:#3f51b5;
     &:hover{
@@ -32,15 +26,9 @@ export const Container = styled.div<Props>`
     }
   }
   p {
-    font-weight: 500;
-    line-height: 20px;
-  }
-
-  img {
-    width: 24px;
-    height: 24px;
-    border-radius: 2px;
-    margin-top: 5px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 8px;
   }
 
   ${props => props.isDragging && css`
@@ -58,10 +46,14 @@ export const Container = styled.div<Props>`
   
 `;
 
-export const Label = styled.span`
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
-  display: inline-block;
-  background: ${props => props.color};
+export const Styledheader = styled.div`
+  background: rgba(230, 236, 245, 0.4);
+  padding: 0 8px;
+  height: 20px;
+  width: 320px;
+  inline-size: 320px; 
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 `;

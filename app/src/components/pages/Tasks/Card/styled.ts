@@ -17,9 +17,12 @@ export const Container = styled.div<Props>`
     width: 24px; 
     height: 24px;
     position: absolute;
-    top: -24px;
+    top: 0;
     right: 0;
     color:#3f51b5;
+    display: flex;
+    justify-content:center;
+    align-items: center;
     &:hover{
       background: #ccc;
       border-radius: 50%;
@@ -48,7 +51,7 @@ export const Container = styled.div<Props>`
 
 export const Styledheader = styled.div`
   background: rgba(230, 236, 245, 0.4);
-  padding: 0 8px;
+  padding: 0 24px 0 8px;
   height: 20px;
   width: 320px;
   inline-size: 320px; 

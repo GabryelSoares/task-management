@@ -1,8 +1,10 @@
 import { Route, Routes as Switch } from "react-router-dom";
 import { Layout } from "../components/templates/Layout";
 import { Home } from "../components/pages/Home";
-import { RequireAuth } from './RequireAuth';
+import { Page404 } from "../components/pages/Page404";
 import { Tasks } from "../components/pages/Tasks";
+import { RequireAuth } from './RequireAuth';
+
 
 
 export const Routes = () => {
@@ -26,6 +28,12 @@ export const Routes = () => {
           }
         />
       </Route>
+      <Route
+        path="*"
+        element={
+          <Page404 />
+        }
+      />
     </Switch>
   );
 
